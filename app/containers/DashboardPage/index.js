@@ -60,7 +60,7 @@ export default function DashboardPage() {
       <StyledGridWrapper ref={ref}>
         <ResponsiveReactGridLayout
           breakpoints={{ lg: 1100, md: 900, sm: 580, xs: 480, xxs: 0 }}
-          cols={{ lg: 3, md: 3, sm: 2, xs: 1, xxs: 1 }}
+          cols={{ lg: 1, md: 1, sm: 1, xs: 1, xxs: 1 }}
           rowHeight={8}
           margin={[20, 10]}
           isResizable={false}
@@ -89,7 +89,7 @@ export default function DashboardPage() {
             <BankInformation />
           </StyledGridItem>
 
-          <StyledGridItem key="4" data-grid={{ x: 0, y: 2, w: 2, h: 16 }}>
+          {/* <StyledGridItem key="4" data-grid={{ x: 0, y: 2, w: 2, h: 16 }}>
             <Bills />
           </StyledGridItem>
 
@@ -107,7 +107,7 @@ export default function DashboardPage() {
 
           <StyledGridItem key="8" data-grid={{ x: 2, y: 2, w: 1, h: 16 }}>
             <Deposits />
-          </StyledGridItem>
+          </StyledGridItem> */}
         </ResponsiveReactGridLayout>
       </StyledGridWrapper>
     </>

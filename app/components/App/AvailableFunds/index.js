@@ -1,5 +1,4 @@
 import React, { useEffect } from 'react';
-import Trend from 'react-trend';
 import { createStructuredSelector } from 'reselect';
 import {
   makeSelectAmountMoney,
@@ -36,28 +35,13 @@ export default function AvailableFunds() {
 
   useEffect(() => {
     getAvailableFunds();
-  }, []);
-
-  const trend = (
-    <Trend
-      smooth
-      autoDraw
-      autoDrawDuration={1500}
-      autoDrawEasing="ease-out"
-      data={accountBalanceHistory}
-      gradient={[`${colors.primaryBlue}`]}
-      radius={0}
-      strokeWidth={4.0}
-      strokeLinecap="butt"
-    />
-  );
+  }, []);  
 
   return (
     <FormattedMessage {...messages.availableFunds}>
       {(title) => (
         <Widget
-          isLoading={isLoading}
-          svg={trend}
+          isLoading={isLoading}          
           title={title}
           content={amountMoney}
           unit={currencyName}

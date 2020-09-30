@@ -33,25 +33,7 @@ export default function Savings() {
   useEffect(() => {
     if (!savings) getSavings();
   }, []);
-
-  const pieChart = (
-    <PieChart margin={0} width={200} height={61}>
-      <Pie
-        data={savingsData}
-        dataKey="value"
-        innerRadius={75}
-        outerRadius={80}
-        paddingAngle={0}
-      >
-        {savingsData?.map((entry, index) => (
-          <Cell
-            key={`cell-${index}`}
-            fill={savingsColors[index % savingsColors.length]}
-          />
-        ))}
-      </Pie>
-    </PieChart>
-  );
+  
 
   return (
     <FormattedMessage {...messages.savings}>
@@ -61,8 +43,7 @@ export default function Savings() {
           title={title}
           unit="%"
           content={savings}
-          isLoading={isLoading}
-          svg={pieChart}
+          isLoading={isLoading}          
         />
       )}
     </FormattedMessage>

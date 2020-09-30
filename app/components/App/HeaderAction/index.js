@@ -44,54 +44,7 @@ function HeaderAction({ intl }) {
 
   return (
     <StyledHeaderAction>
-      <StyledHeaderWrapper>
-        <Dropdown
-          trigger={['click']}
-          overlay={<Messages />}
-          placement="bottomCenter"
-          arrow={!isMobile}
-          getPopupContainer={(trigger) => trigger.parentNode}
-        >
-          <StyledHeaderActionItem
-            type="link"
-            onClick={!messagesData?.data?.length && onGetMessages}
-          >
-            <Badge count={user?.userConfig?.messageCount}>
-              {user?.userConfig?.messageCount ? (
-                <StyledMessageFilled />
-              ) : (
-                <StyledMessageOutlined />
-              )}
-            </Badge>
-            <StyledHeaderActionItemName>
-              <FormattedMessage {...messages.messages} />
-            </StyledHeaderActionItemName>
-          </StyledHeaderActionItem>
-        </Dropdown>
-
-        <Dropdown
-          trigger={['click']}
-          overlay={<Notifications />}
-          placement="bottomCenter"
-          arrow={!isMobile}
-          getPopupContainer={(trigger) => trigger.parentNode}
-        >
-          <StyledHeaderActionItem
-            type="link"
-            onClick={user?.userConfig?.notificationCount && onGetNotifications}
-          >
-            <Badge count={user?.userConfig?.notificationCount}>
-              {user?.userConfig?.notificationCount ? (
-                <StyledBellFilled />
-              ) : (
-                <StyledBellOutlined />
-              )}
-            </Badge>
-            <StyledHeaderActionItemName>
-              <FormattedMessage {...messages.notifications} />
-            </StyledHeaderActionItemName>
-          </StyledHeaderActionItem>
-        </Dropdown>
+      <StyledHeaderWrapper>        
 
         {isMobile ? (
           <>

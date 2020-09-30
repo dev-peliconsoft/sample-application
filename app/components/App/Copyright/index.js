@@ -6,7 +6,7 @@ export default function Copyright() {
     <StyledCopyright>
       Copyright &copy; {new Date().getFullYear()}. Made by{' '}
       <a href="https://github.com/pietrzakadrian" target="_blank">
-        Adrian Pietrzak
+        PeliconSoft India Pvt
       </a>
     </StyledCopyright>
   );
